@@ -3373,6 +3373,10 @@ console.log( "javascriptCourse",javascriptCourse.length)
 console.log( "advancedJavascriptCourses",advancedJavascriptCourses.length)
 
 // Endpoints
+app.get('/', (req, res) => {
+    res.send('Hello from Course server!');
+});
+
 app.get('/python', (req, res) => {
   res.send(pythonCourses);
 });
@@ -3407,4 +3411,5 @@ app.get('/unknown',(req,res)=>{
   res.send(unknown);
 })
 // Start the server
+
 app.listen(8000, () => console.log('API running on http://localhost:8000'));
